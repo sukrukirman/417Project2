@@ -25,8 +25,8 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		BurgerFactory burgerFactory=new BurgerFactory();
-		BurgerStore store=new BurgerStore(burgerFactory);
+		BurgerFactory burgerFactory = new BurgerFactory();
+		BurgerStore store = new BurgerStore(burgerFactory);
 		Waiter waiter = new Waiter(store);
 		drawMenu(waiter);
 

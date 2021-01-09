@@ -11,7 +11,7 @@ public class ReadyState implements State {
 
 	public void getOrder() {
 		waiter.burgerStore.orderBurger(MenuViews.getSelection());
-		waiter.setState(waiter.getOrderState());
+		waiter.setState(waiter.getPreparingOrderState());
 	}
 
 	public void printVoucher() {

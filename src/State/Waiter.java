@@ -4,13 +4,13 @@ import Factory.BurgerStore;
 
 public class Waiter {
 	State readyState;
-	State getOrderState;
+	State preparingOrderState;
 	State state;
 	BurgerStore burgerStore;
 
 	public Waiter(BurgerStore burgerStore) {
 		readyState = new ReadyState(this);
-		getOrderState = new GetOrderState(this);
+		preparingOrderState = new PreparingOrder(this);
 		state = readyState;
 		this.burgerStore=burgerStore;
 	}
@@ -27,7 +27,7 @@ public class Waiter {
 		this.state = state;
 	}
 
-	public State getOrderState() {
-		return getOrderState;
+	public State getPreparingOrderState() {
+		return preparingOrderState;
 	}
 }
