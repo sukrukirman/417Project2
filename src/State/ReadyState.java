@@ -1,5 +1,6 @@
 package State;
 
+import Decorator.Burger;
 import Views.MenuViews;
 
 public class ReadyState implements State {
@@ -11,8 +12,9 @@ public class ReadyState implements State {
 
 	public void getOrder() {
 		int burger_selection = MenuViews.getSelection();
-
-		waiter.burgerStore.orderBurger(burger_selection);
+		Burger burger=waiter.burgerStore.createBurger(burger_selection);
+		burger=waiter.burgerStore.addIngredient(MenuViews.addAdditional(),burger);
+		waiter.burgerStore.orderBurger(burger);
 		waiter.setState(waiter.getPreparingOrderState());
 	}
 

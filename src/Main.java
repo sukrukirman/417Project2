@@ -1,36 +1,36 @@
 import Decorator.Burger;
 import Decorator.Cheese;
 import Decorator.Tomato;
+import Facade.BurgerStoreFacade;
+import Facade.Frier;
+import Facade.Oven;
+import Facade.Radio;
 import Factory.BurgerFactory;
 import Factory.BurgerStore;
 import State.Waiter;
+import Views.MenuViews;
 
 import java.util.Scanner;
 
 public class Main {
-	public static int drawMenu(Waiter waiter) {
-		Scanner scanner = new Scanner(System.in);
-		int selection;
-		do {
-			System.out.println("1) Give order");
-			System.out.println("2) Print my voucher");
-			System.out.println("3) Exit");
-			System.out.print("Enter your selection: ");
-			selection = scanner.nextInt();
-		} while(selection < 1 || selection > 3);
 
-		if(selection == 1) waiter.getOrder();
-		else if(selection == 2) waiter.printVoucher();
-		else System.exit(0);
+	public static BurgerStoreFacade initStoreComponent(){
+		Oven oven=new Oven("Burger Store Oven");
+		Frier frier=new Frier("Burger Store Frier");
+		Radio radio=new Radio("Burger Store Radio");
 
-		return selection;
+		BurgerStoreFacade burgerStoreFacade=new BurgerStoreFacade(radio,oven,frier);
+		return burgerStoreFacade;
 	}
 
 	public static void main(String[] args) {
 		BurgerFactory burgerFactory = new BurgerFactory();
-		BurgerStore store = new BurgerStore(burgerFactory);
+		BurgerStoreFacade burgerStoreFacade=initStoreComponent();
+		BurgerStore store = new BurgerStore(burgerFactory, burgerStoreFacade);
 		Waiter waiter = new Waiter(store);
-		drawMenu(waiter);
+		//MenuViews.store(waiter);
+		MenuViews.drawMenu(waiter);
+
 
 
 

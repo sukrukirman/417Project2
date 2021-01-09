@@ -1,8 +1,29 @@
 package Views;
 
+import State.Waiter;
+
 import java.util.Scanner;
 
 public class MenuViews {
+
+	public static int drawMenu(Waiter waiter) {
+		Scanner scanner = new Scanner(System.in);
+		int selection;
+		do {
+			System.out.println("1) Give order");
+			System.out.println("2) Print my voucher");
+			System.out.println("3) Exit");
+			System.out.print("Enter your selection: ");
+			selection = scanner.nextInt();
+		} while(selection < 1 || selection > 3);
+
+		if(selection == 1) waiter.getOrder();
+		else if(selection == 2) waiter.printVoucher();
+		else System.exit(0);
+
+		return selection;
+	}
+
 	public static int getSelection() {
 		Scanner scanner = new Scanner(System.in);
 		int selection;
@@ -28,6 +49,19 @@ public class MenuViews {
 			System.out.print("Enter selection: ");
 			selection = scanner.nextInt();
 		} while(selection < 1 || selection > 3);
+		return selection;
+	}
+
+	public static int store(Waiter waiter){
+		Scanner scanner = new Scanner(System.in);
+		int selection;
+		do {
+			System.out.println("1) Open Store");
+			System.out.println("2) Close Store");
+			System.out.print("Enter selection: ");
+			selection = scanner.nextInt();
+		} while(selection < 1 || selection > 2);
+
 		return selection;
 	}
 }

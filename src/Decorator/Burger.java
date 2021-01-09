@@ -12,6 +12,15 @@ public abstract class Burger {
 
     public void prepare() {
         System.out.println("Preparing " + name);
+        for(int i=0;i<=100;i=i+10){
+            try {
+                Thread.sleep(250);
+                System.out.print(i+"%--");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("");
     }
 
     public void box() {

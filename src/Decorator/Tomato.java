@@ -1,9 +1,9 @@
 package Decorator;
 
-public class Tomato extends BurgerDecorator{
+public class Tomato extends BurgerDecorator {
 
     public Tomato(Burger burger) {
-    this.burger=burger;
+        this.burger = burger;
     }
 
     @Override
@@ -13,6 +13,6 @@ public class Tomato extends BurgerDecorator{
 
     @Override
     public String getDescription() {
-        return burger.getDescription()+", Tomato";
+        return burger.getDescription() + ", Tomato";
     }
 }
