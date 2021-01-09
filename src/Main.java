@@ -18,7 +18,9 @@ public class Main {
 			System.out.print("Enter your selection: ");
 			selection = scanner.nextInt();
 		} while(selection < 1 || selection > 3);
+
 		if(selection == 1) waiter.getOrder();
+		else if(selection == 2) waiter.printVoucher();
 		else System.exit(0);
 
 		return selection;
