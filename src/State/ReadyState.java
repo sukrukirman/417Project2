@@ -10,7 +10,9 @@ public class ReadyState implements State {
 	}
 
 	public void getOrder() {
-		waiter.burgerStore.orderBurger(MenuViews.getSelection());
+		int burger_selection = MenuViews.getSelection();
+
+		waiter.burgerStore.orderBurger(burger_selection);
 		waiter.setState(waiter.getPreparingOrderState());
 	}
 
