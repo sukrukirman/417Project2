@@ -1,15 +1,18 @@
 package State;
 
+import Factory.BurgerStore;
+
 public class Waiter {
 	State readyState;
 	State getOrderState;
-
 	State state;
+	BurgerStore burgerStore;
 
-	public Waiter() {
+	public Waiter(BurgerStore burgerStore) {
 		readyState = new ReadyState(this);
 		getOrderState = new GetOrderState(this);
 		state = readyState;
+		this.burgerStore=burgerStore;
 	}
 
 	public void getOrder() {

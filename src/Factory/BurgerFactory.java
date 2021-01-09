@@ -5,12 +5,12 @@ import Decorator.Cheese;
 
 public class BurgerFactory {
 
-    public Burger createBurger(String type){
+    public Burger createBurger(int type){
         Burger burger=null;
 
-        if(type.equals("Vegan")){
+        if(type==1){
             burger=new VeganBurger();
-        }else if(type.equals("Cheese Burger")){
+        }else if(type==2){
             burger=new CheeseBurger();
         }
 

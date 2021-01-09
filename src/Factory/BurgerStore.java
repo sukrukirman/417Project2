@@ -9,7 +9,7 @@ public class BurgerStore {
         this.burgerFactory = burgerFactory;
     }
 
-    public Burger orderBurger(String type){
+    public Burger orderBurger(int type){
         Burger burger;
         burger=burgerFactory.createBurger(type);
 
