@@ -28,7 +28,7 @@ public class Main {
 		BurgerStoreFacade burgerStoreFacade=initStoreComponent();
 		BurgerStore store = new BurgerStore(burgerFactory, burgerStoreFacade);
 		Waiter waiter = new Waiter(store);
-		//MenuViews.store(waiter);
+		MenuViews.store(waiter);
 		MenuViews.drawMenu(waiter);
 
 

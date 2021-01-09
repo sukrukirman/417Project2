@@ -24,8 +24,6 @@ public class BurgerStore {
     }
 
     public Burger createBurger(int type) {
-        Burger burger;
-        burger = burgerFactory.createBurger(type);
-        return burger;
+        return burgerFactory.createBurger(type);
     }
 }

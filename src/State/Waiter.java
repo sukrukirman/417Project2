@@ -30,4 +30,12 @@ public class Waiter {
 	public State getPreparingOrderState() {
 		return preparingOrderState;
 	}
+
+	public BurgerStore getBurgerStore() {
+		return burgerStore;
+	}
+
+	public void setBurgerStore(BurgerStore burgerStore) {
+		this.burgerStore = burgerStore;
+	}
 }

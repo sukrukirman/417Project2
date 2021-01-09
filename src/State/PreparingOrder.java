@@ -14,4 +14,6 @@ public class PreparingOrder implements State {
 	public void printVoucher() {
 		System.out.println("Printing voucher");
 	}
+
+
 }

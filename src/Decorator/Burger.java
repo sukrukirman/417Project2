@@ -11,7 +11,7 @@ public abstract class Burger {
     public abstract double cost();
 
     public void prepare() {
-        System.out.println("Preparing " + name);
+        System.out.println("Preparing " + getDescription());
         for(int i=0;i<=100;i=i+10){
             try {
                 Thread.sleep(250);
@@ -24,6 +24,6 @@ public abstract class Burger {
     }
 
     public void box() {
-        System.out.println("Boxing " + name);
+        System.out.println("Boxing " + getDescription());
     }
 }

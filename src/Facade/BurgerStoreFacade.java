@@ -12,11 +12,14 @@ public class BurgerStoreFacade {
     }
 
     public void openStore(){
-
         radio.on();
+        oven.on();
+        frier.on();
     }
 
     public void closeStore(){
         radio.off();
+        oven.off();
+        frier.off();
     }
 }

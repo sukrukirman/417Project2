@@ -61,7 +61,11 @@ public class MenuViews {
 			System.out.print("Enter selection: ");
 			selection = scanner.nextInt();
 		} while(selection < 1 || selection > 2);
-
+		if(selection == 1) waiter.getBurgerStore().burgerStoreFacade.openStore();
+		else if(selection == 2){
+			waiter.getBurgerStore().burgerStoreFacade.closeStore();
+			System.exit(0);
+		}
 		return selection;
 	}
 }
