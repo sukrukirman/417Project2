@@ -23,5 +23,7 @@ public class ReadyState implements State {
         System.out.println("You cannot ask for voucher because there is no order yet!");
     }
 
-
+    public String toString() {
+        return "Ready State";
+    }
 }

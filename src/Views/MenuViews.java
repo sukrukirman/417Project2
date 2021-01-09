@@ -10,6 +10,7 @@ public class MenuViews {
 		Scanner scanner = new Scanner(System.in);
 		int selection;
 		do {
+			System.out.println("");
 			System.out.println("1) See workers");
 			System.out.println("2) Add workers");
 			System.out.println("3) Get help");
@@ -34,6 +35,7 @@ public class MenuViews {
 			System.out.println("2) Print my voucher");
 			System.out.println("3) Admin menu");
 			System.out.println("4) Exit");
+			System.out.println("Current state: " + waiter.getState());
 			System.out.print("Enter your selection: ");
 			selection = scanner.nextInt();
 

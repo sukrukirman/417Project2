@@ -15,6 +15,8 @@ public class Waiter {
 		this.burgerStore=burgerStore;
 	}
 
+	public State getState() { return state; }
+
 	public void getOrder() {
 		state.getOrder();
 	}

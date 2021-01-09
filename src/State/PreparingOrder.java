@@ -17,4 +17,8 @@ public class PreparingOrder implements State {
 		waiter.setState(waiter.getReadyState());
 	}
 
+	@Override
+	public String toString() {
+		return "Prepared Order State";
+	}
 }
