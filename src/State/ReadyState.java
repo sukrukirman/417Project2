@@ -14,7 +14,7 @@ public class ReadyState implements State {
 		waiter.setState(waiter.getOrderState());
 	}
 
-	public void askVoucher() {
+	public void printVoucher() {
 		System.out.println("You cannot ask for voucher because there is no order yet!");
 	}
 }

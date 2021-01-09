@@ -19,6 +19,7 @@ public class Main {
 			selection = scanner.nextInt();
 		} while(selection < 1 || selection > 3);
 		if(selection == 1) waiter.getOrder();
+		else System.exit(0);
 
 		return selection;
 	}

@@ -16,6 +16,10 @@ public class Waiter {
 		state.getOrder();
 	}
 
+	public void printVoucher() {
+		state.printVoucher();
+	}
+
 	public void setState(State state) {
 		this.state = state;
 	}

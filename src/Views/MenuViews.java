@@ -11,6 +11,7 @@ public class MenuViews {
 			System.out.println("1) Vegan Burger");
 			System.out.println("2) Cheese Burger");
 			System.out.println("3) Fish Burger");
+			System.out.println("4) Back");
 			System.out.print("Enter selection: ");
 			selection = scanner.nextInt();
 		} while(selection < 1 || selection > 3);

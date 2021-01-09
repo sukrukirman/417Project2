@@ -11,7 +11,7 @@ public class GetOrderState implements State {
 		System.out.println("I cannot get order since your are already ordering!");
 	}
 
-	public void askVoucher() {
-
+	public void printVoucher() {
+		System.out.println("I cannot give voucher since your are already ordering!");
 	}
 }
