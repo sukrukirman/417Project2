@@ -26,24 +26,27 @@ public class MenuViews {
 		else Singleton.getInstance().getHelp();
 	}
 
-	public static int drawMenu(Waiter waiter) {
+	public static void drawMenu(Waiter waiter) {
 		Scanner scanner = new Scanner(System.in);
 		int selection;
 		do {
-			System.out.println("1) Give order");
+			System.out.println("**************\n1) Give order");
 			System.out.println("2) Print my voucher");
 			System.out.println("3) Admin menu");
 			System.out.println("4) Exit");
 			System.out.print("Enter your selection: ");
 			selection = scanner.nextInt();
-		} while(selection < 1 || selection > 4);
 
-		if(selection == 1) waiter.getOrder();
-		else if(selection == 2) waiter.printVoucher();
-		else if(selection == 3) adminMenu();
-		else System.exit(0);
+			if(selection == 1) waiter.getOrder();
+			else if(selection == 2) waiter.printVoucher();
+			else if(selection == 3) adminMenu();
+			else if(selection == 4){
+				waiter.getBurgerStore().burgerStoreFacade.closeStore();
+				System.exit(0);
+			}
 
-		return selection;
+		} while(true);
+
 	}
 
 	public static int getSelection() {

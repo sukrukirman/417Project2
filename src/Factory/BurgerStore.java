@@ -26,4 +26,8 @@ public class BurgerStore {
     public Burger createBurger(int type) {
         return burgerFactory.createBurger(type);
     }
+
+    public void printVoucher(Burger burger){
+        System.out.println("Total cost is :"+ burger.cost()+"$");
+    }
 }

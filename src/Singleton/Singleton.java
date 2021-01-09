@@ -16,6 +16,10 @@ public class Singleton {
 	}
 
 	public void printWorkers() {
+		if(workers.isEmpty()){
+			System.out.println("There is no worker!!");
+			return;
+		}
 		for(String worker: workers) {
 			System.out.println(worker);
 		}

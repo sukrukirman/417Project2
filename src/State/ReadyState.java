@@ -15,6 +15,7 @@ public class ReadyState implements State {
         Burger burger = waiter.burgerStore.createBurger(burger_selection);
         burger = waiter.burgerStore.addIngredient(MenuViews.addAdditional(), burger);
         waiter.burgerStore.orderBurger(burger);
+        waiter.burgerStore.printVoucher(burger);
         waiter.setState(waiter.getPreparingOrderState());
     }
 
