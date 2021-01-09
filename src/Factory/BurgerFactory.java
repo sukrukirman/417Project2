@@ -12,6 +12,8 @@ public class BurgerFactory {
             burger=new VeganBurger();
         }else if(type==2){
             burger=new CheeseBurger();
+        }else if(type==3){
+            burger=new FishBurger();
         }
 
         return burger;
