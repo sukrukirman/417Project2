@@ -19,8 +19,9 @@ public class BurgerStore {
     }
 
     public Burger addIngredient(int type, Burger burger) {
-       burger=burgerFactory.addIngredient(type,burger);
-       return burger;
+        // Ingredients add additional cost to the burger
+        burger=burgerFactory.addIngredient(type,burger);
+        return burger;
     }
 
     public Burger createBurger(int type) {

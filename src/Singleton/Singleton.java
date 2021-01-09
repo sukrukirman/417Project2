@@ -2,6 +2,10 @@ package Singleton;
 
 import java.util.ArrayList;
 
+/*
+	This class is responsible to have a contact with all Burger Kings. We need to inform them if we hire a person,they keep this record.
+ */
+
 public class Singleton {
 	private static Singleton instance;
 	private ArrayList<String> workers = new ArrayList<String>();

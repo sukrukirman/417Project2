@@ -7,6 +7,7 @@ import Decorator.Tomato;
 public class BurgerFactory {
 
     public Burger createBurger(int type) {
+        // As we get input create different types of burgers
         Burger burger = null;
         if (type == 1) {
             burger = new VeganBurger();

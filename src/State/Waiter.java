@@ -11,7 +11,7 @@ public class Waiter {
 	public Waiter(BurgerStore burgerStore) {
 		readyState = new ReadyState(this);
 		preparingOrderState = new PreparingOrder(this);
-		state = readyState;
+		state = readyState; // We start with ready state if the Burger Shop is opened
 		this.burgerStore=burgerStore;
 	}
 
