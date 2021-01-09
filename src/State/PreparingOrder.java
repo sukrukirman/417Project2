@@ -1,5 +1,7 @@
 package State;
 
+import Decorator.Burger;
+
 public class PreparingOrder implements State {
 	Waiter waiter;
 
@@ -13,7 +15,8 @@ public class PreparingOrder implements State {
 
 	public void printVoucher() {
 		System.out.println("Printing voucher");
-
+		Burger burger=waiter.burgerStore.getOrderList().get(waiter.burgerStore.getOrderList().size()-1);
+		System.out.println("Total Cost is:" +burger.cost()+"$ for "+burger.getDescription());
 		waiter.setState(waiter.getReadyState());
 	}
 
