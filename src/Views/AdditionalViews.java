@@ -2,7 +2,7 @@ package Views;
 
 import java.util.Scanner;
 
-public class AditionalViews {
+public class AdditionalViews {
 	public static boolean needCheese() {
 		Scanner scanner = new Scanner(System.in);
 
