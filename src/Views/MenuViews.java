@@ -1,10 +1,30 @@
 package Views;
 
+import Singleton.Singleton;
 import State.Waiter;
 
 import java.util.Scanner;
 
 public class MenuViews {
+	public static void adminMenu() {
+		Scanner scanner = new Scanner(System.in);
+		int selection;
+		do {
+			System.out.println("1) See workers");
+			System.out.println("2) Add workers");
+			System.out.println("3) Get help");
+			System.out.print("Enter your selection: ");
+			selection = scanner.nextInt();
+		} while(selection < 1 || selection > 3);
+		if(selection == 1) {
+			Singleton.getInstance().printWorkers();
+		}
+		else if(selection == 2) {
+			System.out.print("Enter a employee name: ");
+			Singleton.getInstance().addWorker(scanner.next());
+		}
+		else Singleton.getInstance().getHelp();
+	}
 
 	public static int drawMenu(Waiter waiter) {
 		Scanner scanner = new Scanner(System.in);
@@ -12,13 +32,15 @@ public class MenuViews {
 		do {
 			System.out.println("1) Give order");
 			System.out.println("2) Print my voucher");
-			System.out.println("3) Exit");
+			System.out.println("3) Admin menu");
+			System.out.println("4) Exit");
 			System.out.print("Enter your selection: ");
 			selection = scanner.nextInt();
-		} while(selection < 1 || selection > 3);
+		} while(selection < 1 || selection > 4);
 
 		if(selection == 1) waiter.getOrder();
 		else if(selection == 2) waiter.printVoucher();
+		else if(selection == 3) adminMenu();
 		else System.exit(0);
 
 		return selection;

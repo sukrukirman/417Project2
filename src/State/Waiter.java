@@ -31,6 +31,10 @@ public class Waiter {
 		return preparingOrderState;
 	}
 
+	public State getReadyState() {
+		return readyState;
+	}
+
 	public BurgerStore getBurgerStore() {
 		return burgerStore;
 	}

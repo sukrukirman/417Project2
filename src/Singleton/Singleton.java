@@ -4,20 +4,24 @@ import java.util.ArrayList;
 
 public class Singleton {
 	private static Singleton instance;
-	private ArrayList<String> orders = new ArrayList<String>();
+	private ArrayList<String> workers = new ArrayList<String>();
 
 	public static Singleton getInstance() {
 		if(instance == null) instance = new Singleton();
 		return instance;
 	}
 
-	public void addOrder(String order) {
-		orders.add(order);
+	public void addWorker(String worker) {
+		workers.add(worker);
 	}
 
-	public void printOrders() {
-		for(String order: orders) {
-			System.out.println(order);
+	public void printWorkers() {
+		for(String worker: workers) {
+			System.out.println(worker);
 		}
+	}
+
+	public void getHelp() {
+		System.out.println("In order to get help from USA center call: +1 523 788 22 22");
 	}
 }
