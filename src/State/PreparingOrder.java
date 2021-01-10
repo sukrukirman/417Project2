@@ -11,6 +11,7 @@ public class PreparingOrder implements State {
 
 	public void getOrder() {
 		System.out.println("You cannot give order because we are still preparing the orders!");
+		System.out.println("You need to take your voucher and we will be ready for next order!");
 	}
 
 	public void printVoucher() {
@@ -22,6 +23,6 @@ public class PreparingOrder implements State {
 
 	@Override
 	public String toString() {
-		return "Prepared Order State";
+		return "Preparing Order State";
 	}
 }

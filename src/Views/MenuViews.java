@@ -10,7 +10,6 @@ public class MenuViews {
 		Scanner scanner = new Scanner(System.in);
 		int selection;
 		do {
-			System.out.println("");
 			System.out.println("1) See workers");
 			System.out.println("2) Add workers");
 			System.out.println("3) Get help");
@@ -31,7 +30,7 @@ public class MenuViews {
 		Scanner scanner = new Scanner(System.in);
 		int selection;
 		do {
-			System.out.println("**************\n1) Give order");
+			System.out.println("\n**************\n1) Give order");
 			System.out.println("2) Print my voucher");
 			System.out.println("3) Admin menu");
 			System.out.println("4) Exit");
